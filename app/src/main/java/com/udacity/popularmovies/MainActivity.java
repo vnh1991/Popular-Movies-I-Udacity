@@ -44,10 +44,12 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.menu_top_rated:
                 new NetworkQueryTask().execute(generateUrl(1));
+                setTitle("Top Rated Movies");
                 return true;
                 //break;
             case R.id.menu_popular:
                 new NetworkQueryTask().execute(generateUrl(0));
+                setTitle("Popular Movies");
                 return true;
                 //break;
             default:
